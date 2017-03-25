@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         newAccountButton.alpha = 0
         
         // Animate in
-        UIView.animate(withDuration: 1) {
+        UIView.animate(withDuration: 3) {
             self.blurView.effect = self.effect
             self.appTitle.alpha = 1
             self.emailField.alpha = 1
