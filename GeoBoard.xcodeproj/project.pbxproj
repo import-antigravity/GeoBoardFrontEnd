@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DC5688DE1E867AFF002B3778 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5688DD1E867AFF002B3778 /* MapViewController.swift */; };
+		DC5688E11E8680C2002B3778 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5688E01E8680C2002B3778 /* CoreLocation.framework */; };
 		DC87B1921E8668BD00FC5743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87B1911E8668BD00FC5743 /* AppDelegate.swift */; };
 		DC87B1941E8668BD00FC5743 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87B1931E8668BD00FC5743 /* ViewController.swift */; };
 		DC87B1971E8668BD00FC5743 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC87B1951E8668BD00FC5743 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		DC5688DD1E867AFF002B3778 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		DC5688E01E8680C2002B3778 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DC87B18E1E8668BD00FC5743 /* GeoBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC87B1911E8668BD00FC5743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC87B1931E8668BD00FC5743 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC5688E11E8680C2002B3778 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC5688DF1E8680C2002B3778 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC5688E01E8680C2002B3778 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DC87B1851E8668BD00FC5743 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +96,7 @@
 				DC87B1A81E8668BD00FC5743 /* GeoBoardTests */,
 				DC87B1B31E8668BD00FC5743 /* GeoBoardUITests */,
 				DC87B18F1E8668BD00FC5743 /* Products */,
+				DC5688DF1E8680C2002B3778 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
