@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC87B1921E8668BD00FC5743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87B1911E8668BD00FC5743 /* AppDelegate.swift */; };
+		DC87B1941E8668BD00FC5743 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87B1931E8668BD00FC5743 /* ViewController.swift */; };
+		DC87B1971E8668BD00FC5743 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC87B1951E8668BD00FC5743 /* Main.storyboard */; };
+		DC87B19A1E8668BD00FC5743 /* GeoBoard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC87B1981E8668BD00FC5743 /* GeoBoard.xcdatamodeld */; };
+		DC87B19C1E8668BD00FC5743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC87B19B1E8668BD00FC5743 /* Assets.xcassets */; };
+		DC87B19F1E8668BD00FC5743 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC87B19D1E8668BD00FC5743 /* LaunchScreen.storyboard */; };
+		DC87B1AA1E8668BD00FC5743 /* GeoBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87B1A91E8668BD00FC5743 /* GeoBoardTests.swift */; };
+		DC87B1B51E8668BD00FC5743 /* GeoBoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87B1B41E8668BD00FC5743 /* GeoBoardUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC87B1A61E8668BD00FC5743 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC87B1861E8668BD00FC5743 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC87B18D1E8668BD00FC5743;
+			remoteInfo = GeoBoard;
+		};
+		DC87B1B11E8668BD00FC5743 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC87B1861E8668BD00FC5743 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC87B18D1E8668BD00FC5743;
+			remoteInfo = GeoBoard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC87B18E1E8668BD00FC5743 /* GeoBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC87B1911E8668BD00FC5743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC87B1931E8668BD00FC5743 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC87B1961E8668BD00FC5743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC87B1991E8668BD00FC5743 /* GeoBoard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GeoBoard.xcdatamodel; sourceTree = "<group>"; };
+		DC87B19B1E8668BD00FC5743 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC87B19E1E8668BD00FC5743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC87B1A01E8668BD00FC5743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC87B1A51E8668BD00FC5743 /* GeoBoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoBoardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC87B1A91E8668BD00FC5743 /* GeoBoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoBoardTests.swift; sourceTree = "<group>"; };
+		DC87B1AB1E8668BD00FC5743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC87B1B01E8668BD00FC5743 /* GeoBoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoBoardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC87B1B41E8668BD00FC5743 /* GeoBoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoBoardUITests.swift; sourceTree = "<group>"; };
+		DC87B1B61E8668BD00FC5743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC87B18B1E8668BD00FC5743 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC87B1A21E8668BD00FC5743 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC87B1AD1E8668BD00FC5743 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC87B1851E8668BD00FC5743 = {
+			isa = PBXGroup;
+			children = (
+				DC87B1901E8668BD00FC5743 /* GeoBoard */,
+				DC87B1A81E8668BD00FC5743 /* GeoBoardTests */,
+				DC87B1B31E8668BD00FC5743 /* GeoBoardUITests */,
+				DC87B18F1E8668BD00FC5743 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC87B18F1E8668BD00FC5743 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC87B18E1E8668BD00FC5743 /* GeoBoard.app */,
+				DC87B1A51E8668BD00FC5743 /* GeoBoardTests.xctest */,
+				DC87B1B01E8668BD00FC5743 /* GeoBoardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC87B1901E8668BD00FC5743 /* GeoBoard */ = {
+			isa = PBXGroup;
+			children = (
+				DC87B1911E8668BD00FC5743 /* AppDelegate.swift */,
+				DC87B1931E8668BD00FC5743 /* ViewController.swift */,
+				DC87B1951E8668BD00FC5743 /* Main.storyboard */,
+				DC87B19B1E8668BD00FC5743 /* Assets.xcassets */,
+				DC87B19D1E8668BD00FC5743 /* LaunchScreen.storyboard */,
+				DC87B1A01E8668BD00FC5743 /* Info.plist */,
+				DC87B1981E8668BD00FC5743 /* GeoBoard.xcdatamodeld */,
+			);
+			path = GeoBoard;
+			sourceTree = "<group>";
+		};
+		DC87B1A81E8668BD00FC5743 /* GeoBoardTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC87B1A91E8668BD00FC5743 /* GeoBoardTests.swift */,
+				DC87B1AB1E8668BD00FC5743 /* Info.plist */,
+			);
+			path = GeoBoardTests;
+			sourceTree = "<group>";
+		};
+		DC87B1B31E8668BD00FC5743 /* GeoBoardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DC87B1B41E8668BD00FC5743 /* GeoBoardUITests.swift */,
+				DC87B1B61E8668BD00FC5743 /* Info.plist */,
+			);
+			path = GeoBoardUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC87B18D1E8668BD00FC5743 /* GeoBoard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC87B1B91E8668BD00FC5743 /* Build configuration list for PBXNativeTarget "GeoBoard" */;
+			buildPhases = (
+				DC87B18A1E8668BD00FC5743 /* Sources */,
+				DC87B18B1E8668BD00FC5743 /* Frameworks */,
+				DC87B18C1E8668BD00FC5743 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoBoard;
+			productName = GeoBoard;
+			productReference = DC87B18E1E8668BD00FC5743 /* GeoBoard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC87B1A41E8668BD00FC5743 /* GeoBoardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC87B1BC1E8668BD00FC5743 /* Build configuration list for PBXNativeTarget "GeoBoardTests" */;
+			buildPhases = (
+				DC87B1A11E8668BD00FC5743 /* Sources */,
+				DC87B1A21E8668BD00FC5743 /* Frameworks */,
+				DC87B1A31E8668BD00FC5743 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC87B1A71E8668BD00FC5743 /* PBXTargetDependency */,
+			);
+			name = GeoBoardTests;
+			productName = GeoBoardTests;
+			productReference = DC87B1A51E8668BD00FC5743 /* GeoBoardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DC87B1AF1E8668BD00FC5743 /* GeoBoardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC87B1BF1E8668BD00FC5743 /* Build configuration list for PBXNativeTarget "GeoBoardUITests" */;
+			buildPhases = (
+				DC87B1AC1E8668BD00FC5743 /* Sources */,
+				DC87B1AD1E8668BD00FC5743 /* Frameworks */,
+				DC87B1AE1E8668BD00FC5743 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC87B1B21E8668BD00FC5743 /* PBXTargetDependency */,
+			);
+			name = GeoBoardUITests;
+			productName = GeoBoardUITests;
+			productReference = DC87B1B01E8668BD00FC5743 /* GeoBoardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC87B1861E8668BD00FC5743 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = HuskyDev;
+				TargetAttributes = {
+					DC87B18D1E8668BD00FC5743 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 23QA4DWK3Q;
+						ProvisioningStyle = Automatic;
+					};
+					DC87B1A41E8668BD00FC5743 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 23QA4DWK3Q;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DC87B18D1E8668BD00FC5743;
+					};
+					DC87B1AF1E8668BD00FC5743 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 23QA4DWK3Q;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DC87B18D1E8668BD00FC5743;
+					};
+				};
+			};
+			buildConfigurationList = DC87B1891E8668BD00FC5743 /* Build configuration list for PBXProject "GeoBoard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC87B1851E8668BD00FC5743;
+			productRefGroup = DC87B18F1E8668BD00FC5743 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC87B18D1E8668BD00FC5743 /* GeoBoard */,
+				DC87B1A41E8668BD00FC5743 /* GeoBoardTests */,
+				DC87B1AF1E8668BD00FC5743 /* GeoBoardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC87B18C1E8668BD00FC5743 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC87B19F1E8668BD00FC5743 /* LaunchScreen.storyboard in Resources */,
+				DC87B19C1E8668BD00FC5743 /* Assets.xcassets in Resources */,
+				DC87B1971E8668BD00FC5743 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC87B1A31E8668BD00FC5743 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC87B1AE1E8668BD00FC5743 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC87B18A1E8668BD00FC5743 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC87B1941E8668BD00FC5743 /* ViewController.swift in Sources */,
+				DC87B1921E8668BD00FC5743 /* AppDelegate.swift in Sources */,
+				DC87B19A1E8668BD00FC5743 /* GeoBoard.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC87B1A11E8668BD00FC5743 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC87B1AA1E8668BD00FC5743 /* GeoBoardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC87B1AC1E8668BD00FC5743 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC87B1B51E8668BD00FC5743 /* GeoBoardUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC87B1A71E8668BD00FC5743 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC87B18D1E8668BD00FC5743 /* GeoBoard */;
+			targetProxy = DC87B1A61E8668BD00FC5743 /* PBXContainerItemProxy */;
+		};
+		DC87B1B21E8668BD00FC5743 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC87B18D1E8668BD00FC5743 /* GeoBoard */;
+			targetProxy = DC87B1B11E8668BD00FC5743 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC87B1951E8668BD00FC5743 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC87B1961E8668BD00FC5743 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC87B19D1E8668BD00FC5743 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC87B19E1E8668BD00FC5743 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC87B1B71E8668BD00FC5743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC87B1B81E8668BD00FC5743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC87B1BA1E8668BD00FC5743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 23QA4DWK3Q;
+				INFOPLIST_FILE = GeoBoard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huskydev.GeoBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DC87B1BB1E8668BD00FC5743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 23QA4DWK3Q;
+				INFOPLIST_FILE = GeoBoard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huskydev.GeoBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		DC87B1BD1E8668BD00FC5743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 23QA4DWK3Q;
+				INFOPLIST_FILE = GeoBoardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huskydev.GeoBoardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoBoard.app/GeoBoard";
+			};
+			name = Debug;
+		};
+		DC87B1BE1E8668BD00FC5743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 23QA4DWK3Q;
+				INFOPLIST_FILE = GeoBoardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huskydev.GeoBoardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoBoard.app/GeoBoard";
+			};
+			name = Release;
+		};
+		DC87B1C01E8668BD00FC5743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 23QA4DWK3Q;
+				INFOPLIST_FILE = GeoBoardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huskydev.GeoBoardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = GeoBoard;
+			};
+			name = Debug;
+		};
+		DC87B1C11E8668BD00FC5743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 23QA4DWK3Q;
+				INFOPLIST_FILE = GeoBoardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huskydev.GeoBoardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = GeoBoard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC87B1891E8668BD00FC5743 /* Build configuration list for PBXProject "GeoBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC87B1B71E8668BD00FC5743 /* Debug */,
+				DC87B1B81E8668BD00FC5743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC87B1B91E8668BD00FC5743 /* Build configuration list for PBXNativeTarget "GeoBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC87B1BA1E8668BD00FC5743 /* Debug */,
+				DC87B1BB1E8668BD00FC5743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DC87B1BC1E8668BD00FC5743 /* Build configuration list for PBXNativeTarget "GeoBoardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC87B1BD1E8668BD00FC5743 /* Debug */,
+				DC87B1BE1E8668BD00FC5743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DC87B1BF1E8668BD00FC5743 /* Build configuration list for PBXNativeTarget "GeoBoardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC87B1C01E8668BD00FC5743 /* Debug */,
+				DC87B1C11E8668BD00FC5743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DC87B1981E8668BD00FC5743 /* GeoBoard.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DC87B1991E8668BD00FC5743 /* GeoBoard.xcdatamodel */,
+			);
+			currentVersion = DC87B1991E8668BD00FC5743 /* GeoBoard.xcdatamodel */;
+			path = GeoBoard.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DC87B1861E8668BD00FC5743 /* Project object */;
+}
