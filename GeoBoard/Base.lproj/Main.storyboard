@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -230,7 +231,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                     </subviews>
@@ -257,7 +258,7 @@
                             <barButtonItem systemItem="add" id="nSx-hy-PQw">
                                 <connections>
                                     <action selector="loadNewPostPopUpTextView:" destination="ZzY-MT-9ts" id="g0r-qj-VVq"/>
-                                    <segue destination="oaM-oD-e94" kind="show" id="EjM-CT-Y8Q"/>
+                                    <segue destination="oaM-oD-e94" kind="show" identifier="toMakeNewPost" id="EjM-CT-Y8Q"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="refresh" id="0pc-yh-wNM">
@@ -275,7 +276,6 @@
         <!--New Post View Controller-->
         <scene sceneID="e2T-zK-tE9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WYF-29-Atq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController modalPresentationStyle="overFullScreen" id="oaM-oD-e94" customClass="NewPostViewController" customModule="GeoBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="giO-OO-4x4"/>
@@ -285,16 +285,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="What's on your mind?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JQ1-yG-bSg">
-                                <rect key="frame" x="0.0" y="64" width="375" height="349"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
-                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultBackground" translatesAutoresizingMaskIntoConstraints="NO" id="uSS-Dw-vER">
+                                <rect key="frame" x="-61" y="-31" width="497" height="798"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCU-Wu-9lO">
+                                <rect key="frame" x="0.0" y="159" width="375" height="349"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hGc-ca-vus">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="349"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What's on your mind?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JQ1-yG-bSg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="349"/>
+                                            <color key="backgroundColor" red="0.4786275512" green="0.97596035780000001" blue="1" alpha="0.17378880033557048" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="JQ1-yG-bSg" firstAttribute="leading" secondItem="hGc-ca-vus" secondAttribute="leading" id="0VD-YR-QbK"/>
+                                        <constraint firstAttribute="bottom" secondItem="JQ1-yG-bSg" secondAttribute="bottom" id="32t-lg-dnM"/>
+                                        <constraint firstAttribute="trailing" secondItem="JQ1-yG-bSg" secondAttribute="trailing" id="Tff-z8-u5z"/>
+                                        <constraint firstItem="JQ1-yG-bSg" firstAttribute="top" secondItem="hGc-ca-vus" secondAttribute="top" id="u45-lC-MOt"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wCU-Wu-9lO" secondAttribute="height" multiplier="375:349" id="0Wx-8m-wNb"/>
+                                </constraints>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="uSS-Dw-vER" firstAttribute="top" secondItem="NhI-8a-uoX" secondAttribute="top" constant="-31" id="70V-3T-uq3"/>
+                            <constraint firstAttribute="trailing" secondItem="wCU-Wu-9lO" secondAttribute="trailing" id="CGS-Bl-RY0"/>
+                            <constraint firstAttribute="trailing" secondItem="uSS-Dw-vER" secondAttribute="trailing" constant="-61" id="LUf-aW-sk2"/>
+                            <constraint firstItem="wCU-Wu-9lO" firstAttribute="centerX" secondItem="NhI-8a-uoX" secondAttribute="centerX" id="Uca-vH-l2w"/>
+                            <constraint firstItem="wCU-Wu-9lO" firstAttribute="centerY" secondItem="NhI-8a-uoX" secondAttribute="centerY" id="XTj-9z-FOh"/>
+                            <constraint firstItem="wCU-Wu-9lO" firstAttribute="leading" secondItem="NhI-8a-uoX" secondAttribute="leading" id="dj6-oM-OVS"/>
+                            <constraint firstItem="uSS-Dw-vER" firstAttribute="leading" secondItem="NhI-8a-uoX" secondAttribute="leading" constant="-61" id="eyW-BY-EHW"/>
+                            <constraint firstAttribute="bottom" secondItem="uSS-Dw-vER" secondAttribute="bottom" constant="-100" id="rZg-kq-Se2"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="8eo-RX-2uE" appends="YES" id="fhx-uE-9Py"/>
                         </connections>
@@ -302,9 +333,11 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="imageView" destination="uSS-Dw-vER" id="Gnl-I5-Iu0"/>
                         <outlet property="newPostTextView" destination="JQ1-yG-bSg" id="IZC-FZ-EKp"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WYF-29-Atq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="8eo-RX-2uE">
                     <connections>
                         <action selector="dismissKeyboard" destination="oaM-oD-e94" id="IZV-Gb-yRr"/>

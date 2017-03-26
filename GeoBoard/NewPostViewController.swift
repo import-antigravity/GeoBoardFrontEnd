@@ -11,6 +11,7 @@ import CoreLocation
 
 class NewPostViewController: UIViewController, CLLocationManagerDelegate, UITextViewDelegate {
     @IBOutlet weak var newPostTextView: UITextView!
+    @IBOutlet weak var imageView: UIImageView!
 
     let locationManager = CLLocationManager()
     
@@ -28,6 +29,8 @@ class NewPostViewController: UIViewController, CLLocationManagerDelegate, UIText
         newPostTextView.delegate = self
         newPostTextView.text = "Write your post here..."
         newPostTextView.textColor = UIColor.lightGray
+        
+        addParallaxToView(vw: imageView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,6 +66,9 @@ class NewPostViewController: UIViewController, CLLocationManagerDelegate, UIText
                 print(request.httpBody ?? "Chuck Testa~")
             }
         }.resume()
+        
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
     }
     
     @IBAction func dismissKeyboard() {
@@ -84,11 +90,19 @@ class NewPostViewController: UIViewController, CLLocationManagerDelegate, UIText
         textView.textColor = UIColor.black
     }
     
-    
-    /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func addParallaxToView(vw: UIView) {
+        let amount = 80
+        
+        let horizontal = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
+        horizontal.minimumRelativeValue = -amount
+        horizontal.maximumRelativeValue = amount
+        
+        let vertical = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
+        vertical.minimumRelativeValue = -amount
+        vertical.maximumRelativeValue = amount
+        
+        let group = UIMotionEffectGroup()
+        group.motionEffects = [horizontal, vertical]
+        vw.addMotionEffect(group)
     }
-    */
 }

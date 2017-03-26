@@ -9,5 +9,5 @@
 import Foundation
 
 struct GlobalVariables {
-    static var baseURL = URL(string: "http://192.241.134.224")!
+    static let baseURL = URL(string: "http://192.241.134.224")!
 }
