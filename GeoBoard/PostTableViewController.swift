@@ -11,9 +11,8 @@ import CoreLocation
 
 class PostTableViewController: UITableViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
-    let baseURL = URL(string: "http://192.241.134.224")!
     var posts: [Post] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.requestAlwaysAuthorization()
@@ -22,7 +21,6 @@ class PostTableViewController: UITableViewController, CLLocationManagerDelegate 
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }
-        refresh()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -34,6 +32,18 @@ class PostTableViewController: UITableViewController, CLLocationManagerDelegate 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "DefaultBackground"))
+        self.tableView.backgroundView = imageView
+        imageView.contentMode = .scaleAspectFill
+        imageView.contentScaleFactor = 1.5
+        addParallaxToView(vw: imageView)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        refresh()
     }
 
     // MARK: - Table view data source
@@ -47,10 +57,17 @@ class PostTableViewController: UITableViewController, CLLocationManagerDelegate 
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "noARTableCell", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "noARTableCell", for: indexPath) as! PostTableViewCell
+        let post = self.posts[indexPath.row]
+        cell.displayNameLabel.text = post.dispName
+        cell.latitudeLabel.text = String(format: "%.1f", post.location.coordinate.latitude)
+        cell.longitudeLabel.text = String(format: "%.1f", post.location.coordinate.longitude)
+        cell.altitudeLabel.text = String(format: "%.1f", post.location.altitude)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy h:mm"
+        cell.timeStampLabel.text = dateFormatter.string(from: post.location.timestamp)
+        cell.timeRemainingLabel.text = String(post.timeRemaining)
+        cell.postContentTextView.text = post.postContent
         return cell
     }
     
@@ -62,10 +79,8 @@ class PostTableViewController: UITableViewController, CLLocationManagerDelegate 
         // Placeholder URL Session
         let lat = (locationManager.location?.coordinate.latitude)! as Double
         let long = (locationManager.location?.coordinate.longitude)! as Double
-        print(lat)
-        print(long)
         
-        var request = URLRequest(url: baseURL.appendingPathComponent("getposts").appendingPathComponent(String(format: "%f", lat)).appendingPathComponent(String(format: "%f", long)))
+        var request = URLRequest(url: GlobalVariables.baseURL.appendingPathComponent("getposts").appendingPathComponent(String(format: "%f", lat)).appendingPathComponent(String(format: "%f", long)))
         request.httpMethod = "GET"
         let session = URLSession.shared
         
@@ -76,12 +91,11 @@ class PostTableViewController: UITableViewController, CLLocationManagerDelegate 
                         return
                     }
                     let posts = json["posts"] as! NSArray
-                    print(posts)
                     self.posts = []
                     for post in posts {
-                        print("post:")
                         if let jsonPost = post as? NSDictionary {
-                            self.posts.append(Post(info: jsonPost))
+                            let newPost = Post(info: jsonPost)
+                            self.posts.append(newPost)
                         } else {
                             print("nope, CHUCK TESTA")
                         }
@@ -90,8 +104,25 @@ class PostTableViewController: UITableViewController, CLLocationManagerDelegate 
                 else {
                     print(error!)
                 }
+                self.tableView.reloadData()
             }
         }.resume()
+    }
+    
+    func addParallaxToView(vw: UIView) {
+        let amount = 20
+        
+        let horizontal = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
+        horizontal.minimumRelativeValue = -amount
+        horizontal.maximumRelativeValue = amount
+        
+        let vertical = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
+        vertical.minimumRelativeValue = -amount
+        vertical.maximumRelativeValue = amount
+        
+        let group = UIMotionEffectGroup()
+        group.motionEffects = [horizontal, vertical]
+        vw.addMotionEffect(group)
     }
 
     /*

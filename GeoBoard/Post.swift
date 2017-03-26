@@ -22,13 +22,13 @@ class Post: NSObject {
         postID = info["postID"] as! Int
         dispName = info["dispName"] as! String
         let locationData = info["location"] as! NSDictionary
-        timeRemaining = info["timeReamaining"] as! Int
+        timeRemaining = info["timeRemaining"] as! Int
         postContent = info["postContent"] as! String
         
-        let latitude = locationData["latitude"] as! CLLocationDegrees
-        let longitude = locationData["longitude"] as! CLLocationDegrees
-        let altitude = locationData["altitude"] as! CLLocationDistance
-        let timestamp = locationData["timestamp"] as! Date
-        location = CLLocation(coordinate: CLLocationCoordinate2DMake(latitude, longitude), altitude: altitude, horizontalAccuracy: kCLLocationAccuracyBest, verticalAccuracy: kCLLocationAccuracyBest, timestamp: timestamp)
+        let latitude = (locationData["latitude"] as! NSString).doubleValue 
+        let longitude = (locationData["longitude"] as! NSString).doubleValue
+        let altitude = (locationData["altitude"] as! NSString).doubleValue 
+        let unixTime = (locationData["timestamp"] as? NSString ?? "0").doubleValue
+        location = CLLocation(coordinate: CLLocationCoordinate2DMake(latitude, longitude), altitude: altitude, horizontalAccuracy: kCLLocationAccuracyBest, verticalAccuracy: kCLLocationAccuracyBest, timestamp: Date(timeIntervalSince1970: unixTime))
     }
 }

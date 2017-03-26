@@ -37,19 +37,32 @@ class NewPostViewController: UIViewController, CLLocationManagerDelegate, UIText
     
     func post() {
         let userID = UIDevice.current.identifierForVendor!.uuidString
-        let dispName = "Test User"
-        let location = ["latitude":locationManager.location?.coordinate.latitude,
-                        "longitude":locationManager.location?.coordinate.longitude,
-                        "altitude":locationManager.location?.altitude]
+        let dispName = UIDevice.current.identifierForVendor!.uuidString
+        let location = ["latitude":String(format: "%.1f", locationManager.location!.coordinate.latitude),
+                        "longitude":String(format: "%.1f", locationManager.location!.coordinate.longitude),
+                        "altitude":String(format: "%.1f", locationManager.location!.altitude),
+                        "timestamp":String(Date().timeIntervalSince1970)]
         let timeRemaining = 60 * 60
         guard let postContent = newPostTextView.text else {return}
         
-        let json = ["userID":userID, "dispName":dispName, "location":location as NSDictionary,
-                    "timeRemaining":timeRemaining, "postContent":postContent] as [String : Any]
+        let json = ["userID":userID as String, "dispName":dispName as String, "location":location as NSDictionary,
+                    "timeRemaining":timeRemaining as Int, "postContent":postContent as String] as [String : Any]
         
-        let isValid = JSONSerialization.isValidJSONObject(json)
+        var request = URLRequest(url: GlobalVariables.baseURL.appendingPathComponent("newpost"))
+        request.httpMethod = "POST"
+        let session = URLSession.shared
+        request.httpBody = try! JSONSerialization.data(withJSONObject: json, options: [.prettyPrinted]) as Data
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("applocation/json", forHTTPHeaderField: "Accept")
         
-        print(isValid)
+        session.uploadTask(with: request, from: request.httpBody) { (data, response, error) in
+            if error != nil {
+                print(error!)
+            } else {
+                print("It should have worked???")
+                print(request.httpBody ?? "Chuck Testa~")
+            }
+        }.resume()
     }
     
     @IBAction func dismissKeyboard() {
