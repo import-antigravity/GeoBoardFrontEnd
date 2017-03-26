@@ -75,7 +75,7 @@
 		DC8260D21E87B457000C96DD /* hdar_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@2x.png"; sourceTree = "<group>"; };
 		DC8260D31E87B457000C96DD /* hdar_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@3x.png"; sourceTree = "<group>"; };
 		DC8260DE1E87B4DA000C96DD /* PostAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostAnnotationView.swift; sourceTree = "<group>"; };
-		DC87B18E1E8668BD00FC5743 /* GeoBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC87B18E1E8668BD00FC5743 /* WayPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WayPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC87B1911E8668BD00FC5743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC87B1931E8668BD00FC5743 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DC87B1961E8668BD00FC5743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,10 +83,10 @@
 		DC87B19B1E8668BD00FC5743 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC87B19E1E8668BD00FC5743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC87B1A01E8668BD00FC5743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC87B1A51E8668BD00FC5743 /* GeoBoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoBoardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC87B1A51E8668BD00FC5743 /* WayPointTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WayPointTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC87B1A91E8668BD00FC5743 /* GeoBoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoBoardTests.swift; sourceTree = "<group>"; };
 		DC87B1AB1E8668BD00FC5743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC87B1B01E8668BD00FC5743 /* GeoBoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoBoardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC87B1B01E8668BD00FC5743 /* WayPointUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WayPointUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC87B1B41E8668BD00FC5743 /* GeoBoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoBoardUITests.swift; sourceTree = "<group>"; };
 		DC87B1B61E8668BD00FC5743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,9 +183,9 @@
 		DC87B18F1E8668BD00FC5743 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DC87B18E1E8668BD00FC5743 /* GeoBoard.app */,
-				DC87B1A51E8668BD00FC5743 /* GeoBoardTests.xctest */,
-				DC87B1B01E8668BD00FC5743 /* GeoBoardUITests.xctest */,
+				DC87B18E1E8668BD00FC5743 /* WayPoint.app */,
+				DC87B1A51E8668BD00FC5743 /* WayPointTests.xctest */,
+				DC87B1B01E8668BD00FC5743 /* WayPointUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -233,9 +233,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DC87B18D1E8668BD00FC5743 /* GeoBoard */ = {
+		DC87B18D1E8668BD00FC5743 /* WayPoint */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC87B1B91E8668BD00FC5743 /* Build configuration list for PBXNativeTarget "GeoBoard" */;
+			buildConfigurationList = DC87B1B91E8668BD00FC5743 /* Build configuration list for PBXNativeTarget "WayPoint" */;
 			buildPhases = (
 				DC87B18A1E8668BD00FC5743 /* Sources */,
 				DC87B18B1E8668BD00FC5743 /* Frameworks */,
@@ -245,14 +245,14 @@
 			);
 			dependencies = (
 			);
-			name = GeoBoard;
+			name = WayPoint;
 			productName = GeoBoard;
-			productReference = DC87B18E1E8668BD00FC5743 /* GeoBoard.app */;
+			productReference = DC87B18E1E8668BD00FC5743 /* WayPoint.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DC87B1A41E8668BD00FC5743 /* GeoBoardTests */ = {
+		DC87B1A41E8668BD00FC5743 /* WayPointTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC87B1BC1E8668BD00FC5743 /* Build configuration list for PBXNativeTarget "GeoBoardTests" */;
+			buildConfigurationList = DC87B1BC1E8668BD00FC5743 /* Build configuration list for PBXNativeTarget "WayPointTests" */;
 			buildPhases = (
 				DC87B1A11E8668BD00FC5743 /* Sources */,
 				DC87B1A21E8668BD00FC5743 /* Frameworks */,
@@ -263,14 +263,14 @@
 			dependencies = (
 				DC87B1A71E8668BD00FC5743 /* PBXTargetDependency */,
 			);
-			name = GeoBoardTests;
+			name = WayPointTests;
 			productName = GeoBoardTests;
-			productReference = DC87B1A51E8668BD00FC5743 /* GeoBoardTests.xctest */;
+			productReference = DC87B1A51E8668BD00FC5743 /* WayPointTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DC87B1AF1E8668BD00FC5743 /* GeoBoardUITests */ = {
+		DC87B1AF1E8668BD00FC5743 /* WayPointUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC87B1BF1E8668BD00FC5743 /* Build configuration list for PBXNativeTarget "GeoBoardUITests" */;
+			buildConfigurationList = DC87B1BF1E8668BD00FC5743 /* Build configuration list for PBXNativeTarget "WayPointUITests" */;
 			buildPhases = (
 				DC87B1AC1E8668BD00FC5743 /* Sources */,
 				DC87B1AD1E8668BD00FC5743 /* Frameworks */,
@@ -281,9 +281,9 @@
 			dependencies = (
 				DC87B1B21E8668BD00FC5743 /* PBXTargetDependency */,
 			);
-			name = GeoBoardUITests;
+			name = WayPointUITests;
 			productName = GeoBoardUITests;
-			productReference = DC87B1B01E8668BD00FC5743 /* GeoBoardUITests.xctest */;
+			productReference = DC87B1B01E8668BD00FC5743 /* WayPointUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -315,7 +315,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DC87B1891E8668BD00FC5743 /* Build configuration list for PBXProject "GeoBoard" */;
+			buildConfigurationList = DC87B1891E8668BD00FC5743 /* Build configuration list for PBXProject "WayPoint" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -328,9 +328,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DC87B18D1E8668BD00FC5743 /* GeoBoard */,
-				DC87B1A41E8668BD00FC5743 /* GeoBoardTests */,
-				DC87B1AF1E8668BD00FC5743 /* GeoBoardUITests */,
+				DC87B18D1E8668BD00FC5743 /* WayPoint */,
+				DC87B1A41E8668BD00FC5743 /* WayPointTests */,
+				DC87B1AF1E8668BD00FC5743 /* WayPointUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -412,12 +412,12 @@
 /* Begin PBXTargetDependency section */
 		DC87B1A71E8668BD00FC5743 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DC87B18D1E8668BD00FC5743 /* GeoBoard */;
+			target = DC87B18D1E8668BD00FC5743 /* WayPoint */;
 			targetProxy = DC87B1A61E8668BD00FC5743 /* PBXContainerItemProxy */;
 		};
 		DC87B1B21E8668BD00FC5743 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DC87B18D1E8668BD00FC5743 /* GeoBoard */;
+			target = DC87B18D1E8668BD00FC5743 /* WayPoint */;
 			targetProxy = DC87B1B11E8668BD00FC5743 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -542,7 +542,7 @@
 				DEVELOPMENT_TEAM = 23QA4DWK3Q;
 				INFOPLIST_FILE = GeoBoard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.huskydev.GeoBoard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huskydev.WayPoint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -555,7 +555,7 @@
 				DEVELOPMENT_TEAM = 23QA4DWK3Q;
 				INFOPLIST_FILE = GeoBoard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.huskydev.GeoBoard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huskydev.WayPoint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -572,7 +572,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.huskydev.GeoBoardTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoBoard.app/GeoBoard";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WayPoint.app/WayPoint";
 			};
 			name = Debug;
 		};
@@ -587,7 +587,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.huskydev.GeoBoardTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoBoard.app/GeoBoard";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WayPoint.app/WayPoint";
 			};
 			name = Release;
 		};
@@ -622,7 +622,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DC87B1891E8668BD00FC5743 /* Build configuration list for PBXProject "GeoBoard" */ = {
+		DC87B1891E8668BD00FC5743 /* Build configuration list for PBXProject "WayPoint" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC87B1B71E8668BD00FC5743 /* Debug */,
@@ -631,7 +631,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC87B1B91E8668BD00FC5743 /* Build configuration list for PBXNativeTarget "GeoBoard" */ = {
+		DC87B1B91E8668BD00FC5743 /* Build configuration list for PBXNativeTarget "WayPoint" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC87B1BA1E8668BD00FC5743 /* Debug */,
@@ -640,7 +640,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC87B1BC1E8668BD00FC5743 /* Build configuration list for PBXNativeTarget "GeoBoardTests" */ = {
+		DC87B1BC1E8668BD00FC5743 /* Build configuration list for PBXNativeTarget "WayPointTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC87B1BD1E8668BD00FC5743 /* Debug */,
@@ -649,7 +649,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC87B1BF1E8668BD00FC5743 /* Build configuration list for PBXNativeTarget "GeoBoardUITests" */ = {
+		DC87B1BF1E8668BD00FC5743 /* Build configuration list for PBXNativeTarget "WayPointUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC87B1C01E8668BD00FC5743 /* Debug */,

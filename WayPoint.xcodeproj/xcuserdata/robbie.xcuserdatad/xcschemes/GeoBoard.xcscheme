@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DC87B18D1E8668BD00FC5743"
-               BuildableName = "GeoBoard.app"
-               BlueprintName = "GeoBoard"
-               ReferencedContainer = "container:GeoBoard.xcodeproj">
+               BuildableName = "WayPoint.app"
+               BlueprintName = "WayPoint"
+               ReferencedContainer = "container:WayPoint.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DC87B1A41E8668BD00FC5743"
-               BuildableName = "GeoBoardTests.xctest"
-               BlueprintName = "GeoBoardTests"
-               ReferencedContainer = "container:GeoBoard.xcodeproj">
+               BuildableName = "WayPointTests.xctest"
+               BlueprintName = "WayPointTests"
+               ReferencedContainer = "container:WayPoint.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DC87B1AF1E8668BD00FC5743"
-               BuildableName = "GeoBoardUITests.xctest"
-               BlueprintName = "GeoBoardUITests"
-               ReferencedContainer = "container:GeoBoard.xcodeproj">
+               BuildableName = "WayPointUITests.xctest"
+               BlueprintName = "WayPointUITests"
+               ReferencedContainer = "container:WayPoint.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DC87B18D1E8668BD00FC5743"
-            BuildableName = "GeoBoard.app"
-            BlueprintName = "GeoBoard"
-            ReferencedContainer = "container:GeoBoard.xcodeproj">
+            BuildableName = "WayPoint.app"
+            BlueprintName = "WayPoint"
+            ReferencedContainer = "container:WayPoint.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DC87B18D1E8668BD00FC5743"
-            BuildableName = "GeoBoard.app"
-            BlueprintName = "GeoBoard"
-            ReferencedContainer = "container:GeoBoard.xcodeproj">
+            BuildableName = "WayPoint.app"
+            BlueprintName = "WayPoint"
+            ReferencedContainer = "container:WayPoint.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DC87B18D1E8668BD00FC5743"
-            BuildableName = "GeoBoard.app"
-            BlueprintName = "GeoBoard"
-            ReferencedContainer = "container:GeoBoard.xcodeproj">
+            BuildableName = "WayPoint.app"
+            BlueprintName = "WayPoint"
+            ReferencedContainer = "container:WayPoint.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

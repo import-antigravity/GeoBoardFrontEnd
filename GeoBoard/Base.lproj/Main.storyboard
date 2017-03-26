@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="AR View" id="frL-Th-IMd">
+                    <navigationItem key="navigationItem" title="Exploration View" id="frL-Th-IMd">
                         <barButtonItem key="leftBarButtonItem" systemItem="search" id="njF-j3-xqo">
                             <connections>
                                 <segue destination="ZzY-MT-9ts" kind="show" id="fw7-3Z-c87"/>
@@ -84,7 +84,7 @@
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GeoBoard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pav-AB-nX1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WayPoint" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pav-AB-nX1">
                                 <rect key="frame" x="53" y="133" width="268" height="102"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="268" id="NvG-CC-76c"/>
@@ -178,7 +178,7 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
-        <!--Nearby Posts-->
+        <!--Nearby View-->
         <scene sceneID="h9f-xX-1Jl">
             <objects>
                 <tableViewController id="ZzY-MT-9ts" customClass="PostTableViewController" customModule="GeoBoard" customModuleProvider="target" sceneMemberID="viewController">
@@ -191,7 +191,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vyp-cy-6WQ" id="l4T-2D-dyS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Firstname Lastname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMn-gk-u3R">
@@ -291,7 +291,7 @@
                             <outlet property="delegate" destination="ZzY-MT-9ts" id="aaH-K5-IlL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Nearby Posts" id="WN8-oe-WZR">
+                    <navigationItem key="navigationItem" title="Nearby View" id="WN8-oe-WZR">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="6g2-0u-Uv0">
                                 <connections>
@@ -406,6 +406,6 @@
         <image name="DefaultBackground" width="3456" height="5184"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EjM-CT-Y8Q"/>
+        <segue reference="XNC-Aw-Npe"/>
     </inferredMetricsTieBreakers>
 </document>

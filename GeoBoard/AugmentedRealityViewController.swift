@@ -45,8 +45,8 @@ class AugmentedRealityViewController: ARViewController, ARDataSource, CLLocation
         self.maxDistance = 0
         self.maxVisibleAnnotations = 100
         self.maxVerticalLevel = 5
-        self.headingSmoothingFactor = 0.7
-        self.trackingManager.userDistanceFilter = 0.1
+        self.headingSmoothingFactor = 0.4
+        self.trackingManager.userDistanceFilter = 25
         self.trackingManager.reloadDistanceFilter = 75
         self.setAnnotations(self.postAnnotations)
         self.uiOptions.debugEnabled = false

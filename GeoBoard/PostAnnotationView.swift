@@ -11,7 +11,6 @@ import UIKit
 open class PostAnnotationView: ARAnnotationView, UIGestureRecognizerDelegate
 {
     open var titleLabel: UILabel?
-    open var infoButton: UIButton?
 
     override open func didMoveToSuperview()
     {
@@ -28,25 +27,20 @@ open class PostAnnotationView: ARAnnotationView, UIGestureRecognizerDelegate
         self.titleLabel?.removeFromSuperview()
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 10)
-        label.numberOfLines = 0
+        label.numberOfLines = 5
         label.backgroundColor = UIColor.clear
-        label.textColor = UIColor.white
+        label.textColor = UIColor.darkGray
         self.addSubview(label)
         self.titleLabel = label
         
-        // Info button
-        self.infoButton?.removeFromSuperview()
-        let button = UIButton(type: UIButtonType.detailDisclosure)
-        button.isUserInteractionEnabled = false   // Whole view will be tappable, using it for appearance
-        self.addSubview(button)
-        self.infoButton = button
-        
+        /*
         // Gesture
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(PostAnnotationView.tapGesture))
         self.addGestureRecognizer(tapGesture)
+        */
         
         // Other
-        self.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        self.backgroundColor = UIColor.init(red: 0.4, green: 0.8, blue: 0.8, alpha: 0.4)
         self.layer.cornerRadius = 5
         
         if self.annotation != nil
@@ -58,10 +52,8 @@ open class PostAnnotationView: ARAnnotationView, UIGestureRecognizerDelegate
     func layoutUi()
     {
         let buttonWidth: CGFloat = 40
-        let buttonHeight: CGFloat = 40
         
         self.titleLabel?.frame = CGRect(x: 10, y: 0, width: self.frame.size.width - buttonWidth - 5, height: self.frame.size.height);
-        self.infoButton?.frame = CGRect(x: self.frame.size.width - buttonWidth, y: self.frame.size.height/2 - buttonHeight/2, width: buttonWidth, height: buttonHeight);
     }
     
     // This method is called whenever distance/azimuth is set
@@ -81,14 +73,15 @@ open class PostAnnotationView: ARAnnotationView, UIGestureRecognizerDelegate
         super.layoutSubviews()
         self.layoutUi()
     }
-    
+    /*
     open func tapGesture()
     {
         if let annotation = self.annotation
         {
-            _ = UIAlertController(title: annotation.title, message: "Tapped", preferredStyle: .alert)
+            
         }
     }
+    */
 
 
 }
