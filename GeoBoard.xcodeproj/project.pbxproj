@@ -226,7 +226,7 @@
 				TargetAttributes = {
 					DC87B18D1E8668BD00FC5743 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 23QA4DWK3Q;
+						DevelopmentTeam = ATX696Q8U8;
 						ProvisioningStyle = Automatic;
 					};
 					DC87B1A41E8668BD00FC5743 = {
@@ -455,12 +455,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 23QA4DWK3Q;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = ATX696Q8U8;
 				INFOPLIST_FILE = GeoBoard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.huskydev.GeoBoard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codega.mike.geoboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -468,12 +470,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 23QA4DWK3Q;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = ATX696Q8U8;
 				INFOPLIST_FILE = GeoBoard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.huskydev.GeoBoard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codega.mike.geoboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
