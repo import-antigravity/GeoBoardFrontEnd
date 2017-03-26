@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -138,7 +139,7 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
-        <!--Title-->
+        <!--Nearby Posts-->
         <scene sceneID="h9f-xX-1Jl">
             <objects>
                 <tableViewController id="ZzY-MT-9ts" customClass="PostTableViewController" customModule="GeoBoard" customModuleProvider="target" sceneMemberID="viewController">
@@ -151,7 +152,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vyp-cy-6WQ" id="l4T-2D-dyS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Firstname Lastname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMn-gk-u3R">
@@ -233,13 +234,66 @@
                             <outlet property="delegate" destination="ZzY-MT-9ts" id="aaH-K5-IlL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="WN8-oe-WZR">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nSx-hy-PQw"/>
+                    <navigationItem key="navigationItem" title="Nearby Posts" id="WN8-oe-WZR">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="nSx-hy-PQw">
+                                <connections>
+                                    <action selector="loadNewPostPopUpTextView:" destination="ZzY-MT-9ts" id="g0r-qj-VVq"/>
+                                    <segue destination="oaM-oD-e94" kind="show" id="EjM-CT-Y8Q"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="refresh" id="0pc-yh-wNM">
+                                <connections>
+                                    <action selector="refreshButtonWasPressed:" destination="ZzY-MT-9ts" id="2bw-Y5-yKb"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsZ-jG-Fts" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1980" y="136.28185907046478"/>
+        </scene>
+        <!--New Post View Controller-->
+        <scene sceneID="e2T-zK-tE9">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WYF-29-Atq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController modalPresentationStyle="overFullScreen" id="oaM-oD-e94" customClass="NewPostViewController" customModule="GeoBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="giO-OO-4x4"/>
+                        <viewControllerLayoutGuide type="bottom" id="buA-yM-c0R"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="NhI-8a-uoX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="What's on your mind?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JQ1-yG-bSg">
+                                <rect key="frame" x="0.0" y="64" width="375" height="349"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="8eo-RX-2uE" appends="YES" id="fhx-uE-9Py"/>
+                        </connections>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="newPostTextView" destination="JQ1-yG-bSg" id="IZC-FZ-EKp"/>
+                    </connections>
+                </viewController>
+                <tapGestureRecognizer id="8eo-RX-2uE">
+                    <connections>
+                        <action selector="dismissKeyboard" destination="oaM-oD-e94" id="IZV-Gb-yRr"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2925.5999999999999" y="135.38230884557723"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bFN-uo-JCL">

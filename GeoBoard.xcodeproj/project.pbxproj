@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC4434C31E86FC16007F8960 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4434C21E86FC16007F8960 /* NewPostViewController.swift */; };
 		DC5688E11E8680C2002B3778 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5688E01E8680C2002B3778 /* CoreLocation.framework */; };
 		DC5689071E86E847002B3778 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5689061E86E847002B3778 /* Post.swift */; };
 		DC5689091E86EB99002B3778 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5689081E86EB99002B3778 /* PostTableViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC4434C21E86FC16007F8960 /* NewPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		DC5688E01E8680C2002B3778 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DC5689061E86E847002B3778 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		DC5689081E86EB99002B3778 /* PostTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				DC87B1911E8668BD00FC5743 /* AppDelegate.swift */,
 				DC87B1931E8668BD00FC5743 /* ViewController.swift */,
 				DC5689081E86EB99002B3778 /* PostTableViewController.swift */,
+				DC4434C21E86FC16007F8960 /* NewPostViewController.swift */,
 				DC87B1951E8668BD00FC5743 /* Main.storyboard */,
 				DC87B19B1E8668BD00FC5743 /* Assets.xcassets */,
 				DC87B19D1E8668BD00FC5743 /* LaunchScreen.storyboard */,
@@ -288,6 +291,7 @@
 				DC87B1921E8668BD00FC5743 /* AppDelegate.swift in Sources */,
 				DC87B19A1E8668BD00FC5743 /* GeoBoard.xcdatamodeld in Sources */,
 				DC5689071E86E847002B3778 /* Post.swift in Sources */,
+				DC4434C31E86FC16007F8960 /* NewPostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

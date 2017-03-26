@@ -11,17 +11,19 @@ import CoreLocation
 
 class Post: NSObject {
     let userID: String!
+    let postID: Int!
     let dispName: String!
     let location: CLLocation!
-    let timeRemainSeconds: Int!
+    let timeRemaining: Int!
     let postContent: String!
     
     init(info: NSDictionary) {
         userID = info["userID"] as! String
+        postID = info["postID"] as! Int
         dispName = info["dispName"] as! String
         let locationData = info["location"] as! NSDictionary
-        timeRemainSeconds = info["timeRemainSeconds"] as! Int
-        postContent = info["postContent"] as! String!
+        timeRemaining = info["timeReamaining"] as! Int
+        postContent = info["postContent"] as! String
         
         let latitude = locationData["latitude"] as! CLLocationDegrees
         let longitude = locationData["longitude"] as! CLLocationDegrees

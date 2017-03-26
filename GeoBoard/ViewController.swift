@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         newAccountButton.alpha = 0
         
         // Animate in
-        UIView.animate(withDuration: 3) {
+        UIView.animate(withDuration: 2) {
             self.blurView.effect = self.effect
             self.appTitle.alpha = 1
             self.emailField.alpha = 1
@@ -68,6 +68,10 @@ class ViewController: UIViewController {
         let group = UIMotionEffectGroup()
         group.motionEffects = [horizontal, vertical]
         vw.addMotionEffect(group)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
     }
 }
 

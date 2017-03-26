@@ -7,28 +7,22 @@
 //
 
 import UIKit
+import CoreLocation
 
-class PostTableViewController: UITableViewController {
+class PostTableViewController: UITableViewController, CLLocationManagerDelegate {
+    let locationManager = CLLocationManager()
     let baseURL = URL(string: "http://192.241.134.224")!
     var posts: [Post] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Placeholder URL Session
-        var request = URLRequest(url: baseURL.appendingPathComponent("getposts/2/7/2"))
-        request.httpMethod = "GET"
-        let session = URLSession.shared
-        
-        session.dataTask(with: request) { (data, response, error) in
-            if error == nil {
-                let str = String(bytes: data!, encoding: .utf8)
-                print(str ?? "RIP")
-            }
-            else {
-                print(error!)
-            }
-        }.resume()
+        locationManager.requestAlwaysAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+        refresh()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -49,7 +43,7 @@ class PostTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.posts.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,6 +52,46 @@ class PostTableViewController: UITableViewController {
         // Configure the cell...
 
         return cell
+    }
+    
+    @IBAction func refreshButtonWasPressed(_ sender: Any) {
+        refresh()
+    }
+    
+    func refresh() {
+        // Placeholder URL Session
+        let lat = (locationManager.location?.coordinate.latitude)! as Double
+        let long = (locationManager.location?.coordinate.longitude)! as Double
+        print(lat)
+        print(long)
+        
+        var request = URLRequest(url: baseURL.appendingPathComponent("getposts").appendingPathComponent(String(format: "%f", lat)).appendingPathComponent(String(format: "%f", long)))
+        request.httpMethod = "GET"
+        let session = URLSession.shared
+        
+        session.dataTask(with: request) { (data, response, error) in
+            DispatchQueue.main.async {
+                if error == nil {
+                    guard let json = try! JSONSerialization.jsonObject(with: data!, options: []) as? NSDictionary else {
+                        return
+                    }
+                    let posts = json["posts"] as! NSArray
+                    print(posts)
+                    self.posts = []
+                    for post in posts {
+                        print("post:")
+                        if let jsonPost = post as? NSDictionary {
+                            self.posts.append(Post(info: jsonPost))
+                        } else {
+                            print("nope, CHUCK TESTA")
+                        }
+                    }
+                }
+                else {
+                    print(error!)
+                }
+            }
+        }.resume()
     }
 
     /*
