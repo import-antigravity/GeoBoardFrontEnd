@@ -14,6 +14,8 @@
 		DC8260B91E878E43000C96DD /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8260B81E878E43000C96DD /* PostTableViewCell.swift */; };
 		DC8260BB1E8790F4000C96DD /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8260BA1E8790F4000C96DD /* GlobalVariables.swift */; };
 		DC8260BD1E87A7E7000C96DD /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8260BC1E87A7E7000C96DD /* Posts.swift */; };
+		DC8260BF1E87AF95000C96DD /* HDAugmentedReality in Resources */ = {isa = PBXBuildFile; fileRef = DC8260BE1E87AF95000C96DD /* HDAugmentedReality */; };
+		DC8260C11E87AFBF000C96DD /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8260C01E87AFBF000C96DD /* CoreMotion.framework */; };
 		DC87B1921E8668BD00FC5743 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87B1911E8668BD00FC5743 /* AppDelegate.swift */; };
 		DC87B1941E8668BD00FC5743 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87B1931E8668BD00FC5743 /* ViewController.swift */; };
 		DC87B1971E8668BD00FC5743 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC87B1951E8668BD00FC5743 /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		DC8260B81E878E43000C96DD /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		DC8260BA1E8790F4000C96DD /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		DC8260BC1E87A7E7000C96DD /* Posts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		DC8260BE1E87AF95000C96DD /* HDAugmentedReality */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HDAugmentedReality; sourceTree = "<group>"; };
+		DC8260C01E87AFBF000C96DD /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		DC87B18E1E8668BD00FC5743 /* GeoBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC87B1911E8668BD00FC5743 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC87B1931E8668BD00FC5743 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC8260C11E87AFBF000C96DD /* CoreMotion.framework in Frameworks */,
 				DC5688E11E8680C2002B3778 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +99,7 @@
 		DC5688DF1E8680C2002B3778 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC8260C01E87AFBF000C96DD /* CoreMotion.framework */,
 				DC5688E01E8680C2002B3778 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
@@ -102,6 +108,7 @@
 		DC87B1851E8668BD00FC5743 = {
 			isa = PBXGroup;
 			children = (
+				DC8260BE1E87AF95000C96DD /* HDAugmentedReality */,
 				DC87B1901E8668BD00FC5743 /* GeoBoard */,
 				DC87B1A81E8668BD00FC5743 /* GeoBoardTests */,
 				DC87B1B31E8668BD00FC5743 /* GeoBoardUITests */,
@@ -270,6 +277,7 @@
 			files = (
 				DC87B19F1E8668BD00FC5743 /* LaunchScreen.storyboard in Resources */,
 				DC87B19C1E8668BD00FC5743 /* Assets.xcassets in Resources */,
+				DC8260BF1E87AF95000C96DD /* HDAugmentedReality in Resources */,
 				DC87B1971E8668BD00FC5743 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
