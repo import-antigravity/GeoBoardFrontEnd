@@ -64,7 +64,7 @@ class PostTableViewController: UITableViewController, CLLocationManagerDelegate 
         return cell
     }
     
-    @IBAction func refreshButtonWasPressed(_ sender: Any) {
+    @IBAction func tableRefresh(_ sender: Any) {
         Posts.refresh(locationManager: locationManager, reloadDataMethod: self.tableView.reloadData)
     }
     

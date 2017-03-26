@@ -11,13 +11,14 @@ import CoreLocation
 
 class AugmentedRealityViewController: ARViewController, ARDataSource, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
+    var postAnnotations: [ARAnnotation] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.requestAlwaysAuthorization()
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
             locationManager.startUpdatingLocation()
         }
         
@@ -38,52 +39,26 @@ class AugmentedRealityViewController: ARViewController, ARDataSource, CLLocation
             return
         }
         
-        // Create random annotations around center point    //@TODO
-        //FIXME: set your initial position here, this is used to generate random POIs
-        let lat = (locationManager.location?.coordinate.latitude)! as Double
-        let lon = (locationManager.location?.coordinate.longitude)! as Double
-        let delta = 0.05
-        let count = 50
-        let dummyAnnotations = self.getDummyAnnotations(centerLatitude: lat, centerLongitude: lon, delta: delta, count: count)
+        Posts.refresh(locationManager: locationManager, reloadDataMethod: getPostAnnotations)
    
-        // Present ARViewController
-        //let arViewController = ARViewController()
-        //self.dataSource = self
-//        arViewController.maxDistance = 0
-//        arViewController.maxVisibleAnnotations = 100
-//        arViewController.maxVerticalLevel = 5
-//        arViewController.headingSmoothingFactor = 0.1
-//        arViewController.trackingManager.userDistanceFilter = 25
-//        arViewController.trackingManager.reloadDistanceFilter = 75
-//        arViewController.setAnnotations(dummyAnnotations)
-//        arViewController.uiOptions.debugEnabled = true
-//        arViewController.uiOptions.closeButtonEnabled = true
-//        //arViewController.interfaceOrientationMask = .landscape
-//        arViewController.onDidFailToFindLocation = {
-//            [weak self, weak arViewController] elapsedSeconds, acquiredLocationBefore in
-//                
-//            self?.handleLocationFailure(elapsedSeconds: elapsedSeconds, acquiredLocationBefore: acquiredLocationBefore, arViewController: arViewController)
-//        }
-//        self.navigationController?.pushViewController(arViewController, animated: true)
-//        
-        
         self.dataSource = self
         self.maxDistance = 0
         self.maxVisibleAnnotations = 100
         self.maxVerticalLevel = 5
-        self.headingSmoothingFactor = 0.1
-        self.trackingManager.userDistanceFilter = 25
+        self.headingSmoothingFactor = 0.7
+        self.trackingManager.userDistanceFilter = 0.1
         self.trackingManager.reloadDistanceFilter = 75
-        self.setAnnotations(dummyAnnotations)
-        self.uiOptions.debugEnabled = true
-        self.uiOptions.closeButtonEnabled = true
-        //arViewController.interfaceOrientationMask = .landscape
-//        self.onDidFailToFindLocation = {
-//            [weak self, weak arViewController] elapsedSeconds, acquiredLocationBefore in
-//            
-//            self?.handleLocationFailure(elapsedSeconds: elapsedSeconds, acquiredLocationBefore: acquiredLocationBefore, arViewController: arViewController)
-//        }
-
+        self.setAnnotations(self.postAnnotations)
+        self.uiOptions.debugEnabled = false
+        self.uiOptions.closeButtonEnabled = false
+        /*
+        self.interfaceOrientationMask = .landscape
+        self.onDidFailToFindLocation = {
+            [weak self] elapsedSeconds, acquiredLocationBefore in
+            
+            self?.handleLocationFailure(elapsedSeconds: elapsedSeconds, acquiredLocationBefore: acquiredLocationBefore, arViewController: self)
+        }
+        */
     }
     
     /// This method is called by ARViewController, make sure to set dataSource property.
@@ -94,28 +69,22 @@ class AugmentedRealityViewController: ARViewController, ARDataSource, CLLocation
         return annotationView;
     }
     
-    fileprivate func getDummyAnnotations(centerLatitude: Double, centerLongitude: Double, delta: Double, count: Int) -> Array<ARAnnotation> {
-        var annotations: [ARAnnotation] = []
-        
-        srand48(3)
-        for i in stride(from: 0, to: count, by: 1) {
-            let annotation = ARAnnotation()
-            annotation.location = self.getRandomLocation(centerLatitude: centerLatitude, centerLongitude: centerLongitude, delta: delta)
-            annotation.title = "POI \(i)"
-            annotations.append(annotation)
-        }
-        return annotations
+    @IBAction func refreshButtonWasPressed(_ sender: Any) {
+        Posts.refresh(locationManager: locationManager, reloadDataMethod: getPostAnnotations)
     }
     
-    fileprivate func getRandomLocation(centerLatitude: Double, centerLongitude: Double, delta: Double) -> CLLocation {
-        var lat = centerLatitude
-        var lon = centerLongitude
+    fileprivate func getPostAnnotations() {
+        var annotations: [ARAnnotation] = []
         
-        let latDelta = -(delta / 2) + drand48() * delta
-        let lonDelta = -(delta / 2) + drand48() * delta
-        lat = lat + latDelta
-        lon = lon + lonDelta
-        return CLLocation(latitude: lat, longitude: lon)
+        for post in Posts.posts {
+            let annotation = ARAnnotation()
+            annotation.location = post.location
+            annotation.title = post.postContent
+            annotations.append(annotation)
+        }
+        print(annotations)
+        self.postAnnotations = annotations
+        self.setAnnotations(self.postAnnotations)
     }
     
     func handleLocationFailure(elapsedSeconds: TimeInterval, acquiredLocationBefore: Bool, arViewController: ARViewController?) {

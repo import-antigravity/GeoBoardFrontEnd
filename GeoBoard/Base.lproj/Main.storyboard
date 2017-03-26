@@ -22,15 +22,14 @@
                     <view key="view" contentMode="scaleToFill" id="K2x-Ox-5rV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XZc-0m-A50">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            </containerView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="AR View" id="frL-Th-IMd">
+                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="njF-j3-xqo">
+                            <connections>
+                                <segue destination="ZzY-MT-9ts" kind="show" id="fw7-3Z-c87"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="nSx-hy-PQw">
                                 <connections>
@@ -40,7 +39,7 @@
                             </barButtonItem>
                             <barButtonItem systemItem="refresh" id="0pc-yh-wNM">
                                 <connections>
-                                    <action selector="refreshButtonWasPressed:" destination="ZzY-MT-9ts" id="2bw-Y5-yKb"/>
+                                    <action selector="refreshButtonWasPressed:" destination="reY-a7-05C" id="HOp-zY-h6M"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -292,11 +291,24 @@
                             <outlet property="delegate" destination="ZzY-MT-9ts" id="aaH-K5-IlL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Nearby Posts" id="WN8-oe-WZR"/>
+                    <navigationItem key="navigationItem" title="Nearby Posts" id="WN8-oe-WZR">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="6g2-0u-Uv0">
+                                <connections>
+                                    <segue destination="oaM-oD-e94" kind="show" id="XNC-Aw-Npe"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="refresh" id="3Sy-z2-gxC">
+                                <connections>
+                                    <action selector="tableRefresh:" destination="ZzY-MT-9ts" id="uXK-WR-5zP"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsZ-jG-Fts" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2558" y="914"/>
+            <point key="canvasLocation" x="2330" y="849"/>
         </scene>
         <!--New Post View Controller-->
         <scene sceneID="e2T-zK-tE9">
@@ -372,24 +384,6 @@
             <point key="canvasLocation" x="3020" y="74"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="bFN-uo-JCL">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sRI-Hy-nSL" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Dl-ox-bJ3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ZzY-MT-9ts" kind="relationship" relationship="rootViewController" id="rVW-gM-Vun"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O7j-7o-qmC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1462" y="990"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="rPo-J6-f7q">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GUY-Iu-N92" sceneMemberID="viewController">
@@ -411,4 +405,7 @@
     <resources>
         <image name="DefaultBackground" width="3456" height="5184"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="EjM-CT-Y8Q"/>
+    </inferredMetricsTieBreakers>
 </document>

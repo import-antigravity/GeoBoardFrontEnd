@@ -22,7 +22,7 @@ class NewPostViewController: UIViewController, CLLocationManagerDelegate, UIText
         locationManager.requestAlwaysAuthorization()
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
             locationManager.startUpdatingLocation()
         }
         
@@ -41,9 +41,9 @@ class NewPostViewController: UIViewController, CLLocationManagerDelegate, UIText
     func post() {
         let userID = UIDevice.current.identifierForVendor!.uuidString
         let dispName = UIDevice.current.identifierForVendor!.uuidString
-        let location = ["latitude":String(format: "%.1f", locationManager.location!.coordinate.latitude),
-                        "longitude":String(format: "%.1f", locationManager.location!.coordinate.longitude),
-                        "altitude":String(format: "%.1f", locationManager.location!.altitude),
+        let location = ["latitude":String(format: "%f", locationManager.location!.coordinate.latitude),
+                        "longitude":String(format: "%f", locationManager.location!.coordinate.longitude),
+                        "altitude":String(format: "%f", locationManager.location!.altitude),
                         "timestamp":String(Date().timeIntervalSince1970)]
         let timeRemaining = 60 * 60
         guard let postContent = newPostTextView.text else {return}
