@@ -576,7 +576,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.huskydev.GeoBoardTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WayPoint.app/WayPoint";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WayPoint.temp_caseinsensitive_rename.app/WayPoint.temp_caseinsensitive_rename";
 			};
 			name = Debug;
 		};
@@ -591,7 +591,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.huskydev.GeoBoardTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WayPoint.app/WayPoint";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WayPoint.temp_caseinsensitive_rename.app/WayPoint.temp_caseinsensitive_rename";
 			};
 			name = Release;
 		};

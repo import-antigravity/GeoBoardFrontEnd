@@ -14,7 +14,7 @@
         <!--AugmentedRealityViewController-->
         <scene sceneID="Pyh-Nx-Uwb">
             <objects>
-                <viewController title="AugmentedRealityViewController" id="reY-a7-05C" customClass="AugmentedRealityViewController" customModule="GeoBoard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="AugmentedRealityViewController" id="reY-a7-05C" customClass="AugmentedRealityViewController" customModule="WayPoint" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iE4-Vk-o14"/>
                         <viewControllerLayoutGuide type="bottom" id="4Nj-Q6-3y6"/>
@@ -52,7 +52,7 @@
         <!--LoginScreen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="LoginScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="GeoBoard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="LoginScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="WayPoint" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -181,13 +181,13 @@
         <!--Nearby View-->
         <scene sceneID="h9f-xX-1Jl">
             <objects>
-                <tableViewController id="ZzY-MT-9ts" customClass="PostTableViewController" customModule="GeoBoard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ZzY-MT-9ts" customClass="PostTableViewController" customModule="WayPoint" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="Vcq-ti-Bg9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.23406040268456377" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="noARTableCell" rowHeight="150" id="vyp-cy-6WQ" customClass="PostTableViewCell" customModule="GeoBoard" customModuleProvider="target">
+                            <tableViewCell opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="noARTableCell" rowHeight="150" id="vyp-cy-6WQ" customClass="PostTableViewCell" customModule="WayPoint" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vyp-cy-6WQ" id="l4T-2D-dyS">
@@ -313,7 +313,7 @@
         <!--New Post View Controller-->
         <scene sceneID="e2T-zK-tE9">
             <objects>
-                <viewController modalPresentationStyle="overFullScreen" id="oaM-oD-e94" customClass="NewPostViewController" customModule="GeoBoard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overFullScreen" id="oaM-oD-e94" customClass="NewPostViewController" customModule="WayPoint" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="giO-OO-4x4"/>
                         <viewControllerLayoutGuide type="bottom" id="buA-yM-c0R"/>
